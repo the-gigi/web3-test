@@ -55,7 +55,7 @@ Set up a virtual environment for the project:
 
 # Usage
 
-Make sure your account has some test ETH (e.g from )
+Make sure your account has some test ETH (e.g. from https://sepolia-faucet.pk910.de/)
 
 Then, just run the program...
 
