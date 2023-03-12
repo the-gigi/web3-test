@@ -56,7 +56,7 @@ class WalletManager:
         tx['gas'] = self.w3.eth.estimate_gas(tx)
 
         signed_tx = self.w3.eth.account.sign_transaction(tx, self.account_private_key)
-        tx_hash = self.w3.eth.send_raw_transaction(signed_tx)
+        tx_hash = self.w3.eth.send_raw_transaction(signed_tx.rawTransaction)
         print(tx_hash)
 
         result = self.w3.eth.wait_for_transaction_receipt(tx_hash)
@@ -72,7 +72,7 @@ def main():
     sepolia_spout_account = '0x987d2f1736F8737d530Bdc7C29fD62B0b9a5A893'
 
     balance = str(wm.get_balance('ether'))
-    print (f'balance before transaction: {balance}')
+    print(f'balance before transaction: {balance}')
 
     print('send 20,000 gwei')
     wm.send_eth(sepolia_spout_account, 20000, 'gwei')
@@ -81,6 +81,7 @@ def main():
     print(f'balance before transaction: {balance}')
 
     print('Done.')
+
 
 if __name__ == '__main__':
     main()
