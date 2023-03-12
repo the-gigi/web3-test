@@ -1,5 +1,9 @@
 # web3-test
-Learn web3 with Python
+
+Learn web3 with Python. This is a simple beginners project for managing your MetaMask wallet with Infura using Python.
+
+The code displays your balance, then sends a little test ETH to a sepolia spout and then displays your balance after
+the transaction.
 
 
 # Setup
@@ -12,6 +16,13 @@ Configure your infura project to use API key secret and then store the key and i
 
 - INFURA_API_KEY 
 - INFURA_API_KEY_SECRET
+
+
+Also, get from MetaMask your Sepolia testnet account and private key and store them in the following environment 
+variables. 
+
+- SEPOLIA_ACCOUNT
+- METAMASK_PRIVATE_KEY
 
 The code reads these env variables to generate a basic authentication token.
 
@@ -43,9 +54,18 @@ Set up a virtual environment for the project:
 . ./init.sh
 ```
 
-
-
 # Usage
+
+Make sure your account has some test ETH
+
+Then, just run the program...
+
+```
+$ poetry run python main.py
+balance before transaction: 2.1259894454
+send 20,000 gwei to 0x987d2f1736F8737d530Bdc7C29fD62B0b9a5A893 (Sepolia spout account)
+balance after transaction: 2.1257594454
+```
 
 
 

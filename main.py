@@ -57,7 +57,6 @@ class WalletManager:
 
         signed_tx = self.w3.eth.account.sign_transaction(tx, self.account_private_key)
         tx_hash = self.w3.eth.send_raw_transaction(signed_tx.rawTransaction)
-        print(tx_hash)
 
         result = self.w3.eth.wait_for_transaction_receipt(tx_hash)
         if result['status'] != 1:
@@ -74,13 +73,11 @@ def main():
     balance = str(wm.get_balance('ether'))
     print(f'balance before transaction: {balance}')
 
-    print('send 20,000 gwei')
+    print(f'send 20,000 gwei to {sepolia_spout_account} (Sepolia spout account)')
     wm.send_eth(sepolia_spout_account, 20000, 'gwei')
 
     balance = str(wm.get_balance('ether'))
-    print(f'balance before transaction: {balance}')
-
-    print('Done.')
+    print(f'balance after transaction: {balance}')
 
 
 if __name__ == '__main__':
