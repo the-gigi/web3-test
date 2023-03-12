@@ -68,13 +68,13 @@ def main():
     wm = WalletManager()
     # w3 = cli.instance
 
-    sepolia_spout_account = '0x987d2f1736F8737d530Bdc7C29fD62B0b9a5A893'
+    sepolia_faucet_account = '0x987d2f1736F8737d530Bdc7C29fD62B0b9a5A893'
 
     balance = str(wm.get_balance('ether'))
     print(f'balance before transaction: {balance}')
 
-    print(f'send 20,000 gwei to {sepolia_spout_account} (Sepolia spout account)')
-    wm.send_eth(sepolia_spout_account, 20000, 'gwei')
+    print(f'send 20,000 gwei to {sepolia_faucet_account} (Sepolia faucet account)')
+    wm.send_eth(sepolia_faucet_account, 20000, 'gwei')
 
     balance = str(wm.get_balance('ether'))
     print(f'balance after transaction: {balance}')
