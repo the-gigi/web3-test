@@ -2,7 +2,6 @@ import base64
 import os
 
 import web3
-from pprint import pprint as pp
 
 
 class WalletManager:
@@ -14,10 +13,6 @@ class WalletManager:
         self.max_fee_per_gas = self.w3.toWei('250', 'gwei')
         self.max_priority_fee_per_gas = self.w3.eth.max_priority_fee
         self.chain_id = self.w3.eth.chain_id
-
-    @property
-    def instance(self):
-        return self.w3
 
     @staticmethod
     def __create_web3_instance():
@@ -38,7 +33,6 @@ class WalletManager:
             return self.w3.fromWei(balance, unit)
 
     def send_eth(self, target_account, amount, unit='wei'):
-        """ """
         if unit != 'wei':
             amount = self.w3.toWei(amount, unit)
 
@@ -66,7 +60,6 @@ class WalletManager:
 def main():
     """ """
     wm = WalletManager()
-    # w3 = cli.instance
 
     sepolia_faucet_account = '0x987d2f1736F8737d530Bdc7C29fD62B0b9a5A893'
 
