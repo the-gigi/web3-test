@@ -55,13 +55,13 @@ Set up a virtual environment for the project:
 
 # Usage
 
-Make sure your account has some test ETH (e.g. from https://sepolia-faucet.pk910.de/)
+Make sure your account has some test ETH (e.g. from https://www.infura.io/faucet)
 
 Then, just run the program...
 
 ```
 $ poetry run python main.py
-balance before transaction: 2.1259894454
-send 20,000 gwei to 0x987d2f1736F8737d530Bdc7C29fD62B0b9a5A893 (Sepolia faucet account)
-balance after transaction: 2.1257594454
+balance before transaction: 2.625184945399832
+send 20,000 gwei to 0xEa4d57B2dD421c5bfC893d126Ec15bc42B3d0bcD (Sepolia faucet account)
+balance after transaction: 2.625143945399664
 ```

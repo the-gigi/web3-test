@@ -61,7 +61,7 @@ def main():
     """ """
     wm = WalletManager()
 
-    sepolia_faucet_account = '0x987d2f1736F8737d530Bdc7C29fD62B0b9a5A893'
+    sepolia_faucet_account = wm.w3.toChecksumAddress('0xea4d57b2dd421c5bfc893d126ec15bc42b3d0bcd')
 
     balance = str(wm.get_balance('ether'))
     print(f'balance before transaction: {balance}')
