@@ -7,7 +7,7 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-web3 = "^7.14.1"
+web3 = "^7.15.0"
 
 [tool.poetry.dev-dependencies]
 
